@@ -1,0 +1,14 @@
+{
+  "name": "mt-tools",
+  "version": "0.1.0",
+  "description": "mt tools for mit-ui component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yukap",
+  "license": "MIT",
+  "bin": {
+    "mt-tools": "./bin/mt-tools.js"
+  }
+}
