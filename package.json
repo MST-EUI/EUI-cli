@@ -1,5 +1,5 @@
 {
-  "name": "mt-tools",
+  "name": "eui-tools",
   "version": "0.1.0",
   "description": "mt tools for mit-ui component",
   "main": "index.js",
@@ -9,6 +9,15 @@
   "author": "yukap",
   "license": "MIT",
   "bin": {
-    "mt-tools": "./bin/mt-tools.js"
+    "edev": "bin/edev.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.15.1",
+    "inquirer": "^6.0.0",
+    "semver": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=8"
   }
 }
