@@ -1,19 +1,20 @@
 {
   "name": "eui-tools",
   "version": "0.1.0",
-  "description": "mt tools for mit-ui component",
+  "description": "a devtools for eui component",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "yukap",
+  "author": "eJay",
   "license": "MIT",
   "bin": {
-    "edev": "bin/edev.js"
+    "eui-tools": "bin/eui-tools.js"
   },
   "dependencies": {
     "chalk": "^2.4.1",
     "commander": "^2.15.1",
+    "download": "^7.0.0",
     "inquirer": "^6.0.0",
     "semver": "^5.5.0"
   },

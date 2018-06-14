@@ -2,12 +2,7 @@
 
 'use strict'
 
-const {
-    version,
-    engines: {
-        node: requiredVersion
-    }
-} = require('../package.json')
+const pkg = require('../package.json')
 
 
 const init = require('../src/init')
@@ -15,11 +10,11 @@ const init = require('../src/init')
 const program = require('commander')
 
 program
-    .version(version)
+    .version(pkg.version)
     .usage('<command> [options]')
 
 program
-    .command('init')
+    .command('init [type]')
     .description('init a eui component template for developer')
     .action(() => {
         init();
