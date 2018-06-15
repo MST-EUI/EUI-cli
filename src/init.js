@@ -3,12 +3,13 @@
 const fs = require('fs')
 const path = require('path')
 
+const { log, error } = console
 const chalk = require('chalk')
-const log = console.log
 const inquirer = require('inquirer')
+const rm = require('rimraf')
 
 const alias = require('../alias')
-const utils = require('./utils')
+const { fetchTpl, writeFile } = require('./utils')
 
 
 const questions = [
@@ -37,24 +38,31 @@ const questions = [
 module.exports = () => {
 
     const tplType = process.argv[3] || 'pc'
-    const tplUrl = alias[tplType]
+    const tplUrl = /^https?:\/\//.test(tplType) ? tplType : alias[tplType]
 
-    if (tplUrl === undefined && !/^https?:\/\//.test(tplUrl)) {
+    if (tplUrl === undefined) {
         log(chalk.red(`Can not find template: ${tplType}`))
         return
     }
 
     log('')
     log('Welcome to eui-component generator!')
-    log('You are going to generator your component with this template:')
-    log(chalk.green(tplUrl))
+    log('May I ask you some questions?')
     log('')
-    log(path.basename(process.cwd()))
 
     Promise.all([
         inquirer.prompt(questions),
-        utils.fetchTpl(tplUrl)
-    ]).then(([results, path]) => {
-        log(results, path);
+        fetchTpl(tplUrl)
+    ]).then(([results, files]) => {
+        log(`Start to Copy Files`)
+        // 根据download下来的文件重写到本地当前目录
+        files.filter(({ type }) => type === 'file')
+            .map(file => writeFile(file))
+        // 删除download下来的目录
+        rm(files[0].path, {}, () => {})
+        log('')
+        log(`Generator Component ${results.name} Success!`)
+    }).catch(err => {
+        log(`Generator Component Error: ${err}`)
     })
 }
