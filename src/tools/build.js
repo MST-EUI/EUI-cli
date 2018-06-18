@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const chalk = require('chalk');
 const rm = require('rimraf');
-const webpackConfig = require('../webpack.config');
+const webpackConfig = require('../webpack.config.prod');
 
 const { log } = console;
 const cwd = process.cwd();

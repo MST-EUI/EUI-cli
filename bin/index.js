@@ -29,4 +29,12 @@ Object.keys(eui).forEach((it) => {
     });
 });
 
+// server also serve server:ie
+program
+  .command('server:ie')
+  .description(eui.server.description)
+  .action(() => {
+    eui.server.run('ie');
+  });
+
 program.parse(process.argv);
