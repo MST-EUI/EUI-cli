@@ -5,7 +5,7 @@ const chalk = require('chalk');
 const inquirer = require('inquirer');
 const rm = require('rimraf');
 
-const alias = require('../../alias');
+const alias = require('../alias');
 const { fetchTpl, writeFile } = require('../utils');
 
 const questions = [
