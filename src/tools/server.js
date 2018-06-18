@@ -1,5 +1,5 @@
 const path = require('path');
-const cp = require('child_process');
+const { exec } = require('child_process');
 
 const { log, error } = console;
 const cwd = process.cwd();
@@ -12,7 +12,8 @@ module.exports = {
     if (type === 'ie') {
       customCommand = customCommand.replace(/--inline/g, '');
     }
-    cp.exec(customCommand, {
+
+    const server = exec(customCommand, {
       cwd,
     }, (err, stdout, stderr) => {
       if (err) {
@@ -21,6 +22,13 @@ module.exports = {
       }
       log(`${stdout}`);
       log(`${stderr}`);
+    });
+
+    server.on('stdin', (data) => {
+      log(data);
+    });
+    server.on('stdout', (data) => {
+      log(data);
     });
   },
 };

@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const chalk = require('chalk');
 const rm = require('rimraf');
 const webpackConfig = require('../webpack.config.prod');
+const pkg = require('../../package.json');
 
 const { log } = console;
 const cwd = process.cwd();
@@ -15,12 +16,14 @@ module.exports = {
     rm(path.join(cwd, 'dist'), {}, () => {});
 
     log('build start...');
+    log(`EUI-tools version: ${pkg.version}`);
     log('');
     webpack(webpackConfig, (err, stats) => { // eslint-disable-line
       if (err) {
         return err.toString();
       }
-      log(chalk.green('build is successful.'));
+      log(stats.toString());
+      log(chalk.green('Status: successful.'));
     });
   },
 };
