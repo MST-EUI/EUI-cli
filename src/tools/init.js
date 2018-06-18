@@ -12,7 +12,7 @@ const questions = [
   {
     name: 'name', // used for program.command(<name>), required
     message: 'Component Name:',
-    default: path.basename(process.cwd()),
+    default: `eui-${path.basename(process.cwd())}`,
     validate: (name) => {
       if (/^eui+-/.test(name)) {
         return true;
@@ -29,10 +29,9 @@ const questions = [
   {
     name: 'author',
     message: 'Author Name:',
-    default: process.env.USER || process.env.USERNAME || '',
+    default: 'mistong eui team' || process.env.USER || process.env.USERNAME || '',
   },
 ];
-
 
 module.exports = {
   name: 'init',
