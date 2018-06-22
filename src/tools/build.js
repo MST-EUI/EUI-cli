@@ -23,7 +23,7 @@ module.exports = {
         return err.toString();
       }
       log(stats.toString());
-      log(chalk.green('Status: successful.'));
+      log(chalk.green('build successful.'));
     });
   },
 };

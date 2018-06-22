@@ -1,12 +1,12 @@
-const path = require('path');
+const util = require('./utils');
 
 module.exports = {
   entry: {
-    index: './demo/index.js',
+    index: util.cwdPath('./demo/index.js'),
   },
   output: {
     filename: '[name].js',
-    path: path.join(__dirname, 'dist'),
+    path: util.cwdPath('dist'),
     publicPath: '/',
     library: 'demo',
     libraryTarget: 'umd',

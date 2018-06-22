@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawn } = require('child_process');
 
 const { log, error } = console;
 const download = require('download');
@@ -32,6 +33,33 @@ const utils = {
       log(`Write File ${targetPath} Error:`);
       error(err);
     }
+  },
+  // open url in default browser
+  open(url) {
+    let command;
+    switch (process.platform) {
+      case 'darwin':
+        command = 'open';
+        break;
+      case 'win32':
+        command = 'explorer.exe';
+        break;
+      case 'linux':
+        command = 'xdg-open';
+        break;
+      default:
+        error('Can not open browser');
+        return;
+    }
+    spawn(command, [url]);
+  },
+  // get absolute path to cwd
+  cwdPath(...args) {
+    return path.join(process.cwd(), ...args);
+  },
+  // get absolute path to __dirname
+  relPath(...args) {
+    return path.join(__dirname, ...args);
   },
 };
 

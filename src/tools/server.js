@@ -1,34 +1,67 @@
-const path = require('path');
-const { exec } = require('child_process');
+const express = require('express');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const webpack = require('webpack');
+const chalk = require('chalk');
+const portscanner = require('portscanner');
+const ip = require('ip');
+
+const util = require('../utils');
+const webpackConfig = require('../webpack.config.prod');
 
 const { log, error } = console;
-const cwd = process.cwd();
-let customCommand = `./node_modules/.bin/webpack-dev-server --open --inline --history-api-fallback --config ${path.join(__dirname, '../', 'webpack.config.dev.js')} --hot --progress --port 4000`;
 
 module.exports = {
   name: 'server', // used for program.command(<name>), required
-  description: 'webpack-dev-server for development',
-  run: (type) => {
-    if (type === 'ie') {
-      customCommand = customCommand.replace(/--inline/g, '');
-    }
+  description: 'server for development',
+  run: () => {
+    let port = 4000;
+    const ipAddr = ip.address();
 
-    const server = exec(customCommand, {
-      cwd,
-    }, (err, stdout, stderr) => {
+    portscanner.findAPortNotInUse(port, port + 10, ipAddr, (err, avaiblePort) => {
+      if (err || !avaiblePort) {
+        error(chalk.red.bold(`Port ${port} in use. exit now!`));
+        return process.exit(1);
+      }
+      if (avaiblePort !== port) {
+        log(chalk.red.bold(`Port ${port} in use, Change to ${avaiblePort}`));
+        port = avaiblePort;
+      }
+      const address = `http://${ipAddr}:${port}`;
+      log(address);
+
+      const app = express();
+      app.listen(port, (appErr) => {
+        if (appErr) {
+          log(appErr);
+        }
+        log(`listened at ${address}`);
+      });
+    });
+    return;
+    const app = express();
+    const compiler = webpack(webpackConfig);
+
+    app.use((req, res, next) => {
+      // support cors
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      next();
+    });
+
+    app.use(webpackDevMiddleware(compiler, {
+      // options
+    }));
+    app.get('/', (req, res) => res.send('Hello World!'));
+    app.use(express.static('/'));
+    app.listen('4000', (err) => {
       if (err) {
-        error(`exec error: ${err}`);
+        log(err);
         return;
       }
-      log(`${stdout}`);
-      log(`${stderr}`);
-    });
+      const address = 'http://localhost:4000';
+      log(`Listening at ${chalk.green.bold(address)}`);
 
-    server.on('stdin', (data) => {
-      log(data);
-    });
-    server.on('stdout', (data) => {
-      log(data);
+      // open url in default browser
+      util.open(address);
     });
   },
 };
