@@ -14,7 +14,7 @@ Object.keys(tools).forEach((item) => {
     .command(name)
     .description(description)
     .action((option) => {
-        action.call(this, option);
+      action.call(this, option);
     });
 });
 
