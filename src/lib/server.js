@@ -8,7 +8,7 @@ let customCommand = `./node_modules/.bin/webpack-dev-server --open --inline --hi
 module.exports = {
   name: 'server', // used for program.command(<name>), required
   description: 'webpack-dev-server for development',
-  run: (type) => {
+  action: (type) => {
     if (type === 'ie') {
       customCommand = customCommand.replace(/--inline/g, '');
     }

@@ -11,7 +11,7 @@ const cwd = process.cwd();
 module.exports = {
   name: 'build', // used for program.command(<name>), required
   description: 'build component before publish',
-  run: () => {
+  action: () => {
     // remove old files before build start
     rm(path.join(cwd, 'dist'), {}, () => {});
 

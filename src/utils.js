@@ -17,6 +17,7 @@ const utils = {
       }).then((files) => {
         resolve(files);
       }).catch((err) => {
+        log('');
         log(`Download Template Error: ${err}`);
         error(err);
       });
