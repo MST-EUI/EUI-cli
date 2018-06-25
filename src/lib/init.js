@@ -13,11 +13,9 @@ const questions = [
     name: 'name', // used for program.command(<name>), required
     message: 'Component Name:',
     default: path.basename(process.cwd()),
-    validate: name =>
-      /^eui+\-/.test(name)
+    validate: name => (/^eui-/.test(name)
       ? true
-      : log(chalk.yellow(` Component Name should start with eui- `))
-    ,
+      : log(chalk.yellow('Component Name should start with eui-'))),
   },
   {
     name: 'description',
@@ -52,12 +50,12 @@ module.exports = {
       inquirer.prompt(questions),
       fetchTpl(tplUrl),
     ]).then(([results, files]) => {
-      log(results)
+      log(results);
       log('Start to Copy Files');
       // 根据download下来的文件重写到本地当前目录
-      // files.filter(({ type }) => type === 'file').map(file => writeFile(file));
+      files.filter(({ type }) => type === 'file').map(file => writeFile(file));
       // 删除download下来的目录
-      // rm(files[0].path, {}, () => {});
+      rm(files[0].path, {}, () => {});
       log('');
       log(chalk.green(`Generator Component ${results.name} Success!`));
     }).catch((err) => {
