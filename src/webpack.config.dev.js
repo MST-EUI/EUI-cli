@@ -1,5 +1,5 @@
-const util = require('./utils');
 const webpack = require('webpack');
+const util = require('./utils');
 
 module.exports = {
   entry: {
