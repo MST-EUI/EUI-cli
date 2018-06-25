@@ -1,13 +1,16 @@
 const util = require('./utils');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    index: util.cwdPath('./src/index.js'),
+    app: [
+      util.cwdPath('./demo/index.js'),
+      'webpack-hot-middleware/client?reload=true&noInfo=true',
+    ],
   },
   output: {
     filename: '[name].js',
     path: util.cwdPath('dist'),
-    publicPath: '/',
     library: 'demo',
     libraryTarget: 'umd',
   },
@@ -15,6 +18,7 @@ module.exports = {
     react: 'React',
     'react-dom': 'ReactDOM',
   },
+  cache: true,
   module: {
     loaders: [
       {
@@ -38,6 +42,15 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new webpack.NoErrorsPlugin(),
+    new webpack.SourceMapDevToolPlugin({
+      module: false,
+    }),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.NoEmitOnErrorsPlugin(),
+  ],
   resolve: {
     extensions: ['', '.js', '.jsx'],
   },

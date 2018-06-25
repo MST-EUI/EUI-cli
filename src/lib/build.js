@@ -10,12 +10,12 @@ const cwd = process.cwd();
 
 module.exports = {
   name: 'build', // used for program.command(<name>), required
-  description: 'build component before publish',
+  description: 'Build component before publish',
   action: () => {
     // remove old files before build start
     rm(path.join(cwd, 'dist'), {}, () => {});
 
-    log('build start...');
+    log('Build start...');
     log(`EUI-tools version: ${pkg.version}`);
     log('');
     webpack(webpackConfig, (err, stats) => { // eslint-disable-line
@@ -23,7 +23,7 @@ module.exports = {
         return err.toString();
       }
       log(stats.toString());
-      log(chalk.green('Status: successful.'));
+      log(chalk.green('Build successful.'));
     });
   },
 };

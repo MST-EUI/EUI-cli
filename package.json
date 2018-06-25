@@ -15,12 +15,19 @@
     "mkdirp": "^0.5.1",
     "rimraf": "^2.6.2",
     "semver": "^5.5.0",
-    "webpack": "^4.12.1"
+    "express": "~4.13.4",
+    "ip": "^1.1.5",
+    "portscanner": "^2.2.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-middleware": "~1.6.1",
+    "webpack-dev-server": "^1.14.0",
+    "webpack-hot-middleware": "~2.10.0"
   },
   "engines": {
     "node": ">=8"
   },
   "devDependencies": {
+    "mocha": "^5.2.0",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0"
