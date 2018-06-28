@@ -1,12 +1,16 @@
 {
-  "name": "eui-tools",
+  "name": "eui-cli",
   "version": "0.1.0",
-  "description": "a devtools for eui component",
+  "description": "Devtools for eui component",
   "author": "mistong eui team",
   "license": "MIT",
   "bin": {
     "eui": "bin/eui-tools.js"
   },
+  "files": [
+    "bin",
+    "src"
+  ],
   "dependencies": {
     "chalk": "^2.4.1",
     "commander": "^2.15.1",
@@ -31,8 +35,7 @@
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "mocha": "^5.2.0"
+    "eslint-plugin-import": "^2.13.0"
   },
   "config": {
     "commitizen": {
