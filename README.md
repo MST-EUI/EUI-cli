@@ -4,7 +4,7 @@
 
 # Install
 
-`$ npm i eui-tools -g`
+`$ npm i @mistong/eui-cli -g`
 
 # Usage
 
