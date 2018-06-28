@@ -1,6 +1,6 @@
-# EUI-tools
+# EUI-cli
 
-铭师堂EUI组件构建工具
+铭师堂 `EUI` 组件构建工具
 
 # Install
 
@@ -8,7 +8,7 @@
 
 # Usage
 
-* `eui init` 根据模板初始化eui-component项目
+* `eui init` 根据模板初始化 `eui-component` 项目
 * `eui server` 启动本地开发服务器
 * `eui build` 打包模块
 
