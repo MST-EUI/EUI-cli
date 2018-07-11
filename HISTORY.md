@@ -1,7 +1,11 @@
 # History
 ---
+
+## 0.1.3
+- `FIXED` fixed `can't resolve module ReactDOM` issue
+
 ## 0.1.2
-- `fixed` fixed reademe useage description correctly
+- `FIXED` fixed reademe useage description correctly
 ---
 ## 0.1.1
-- `init` publish for first version, with function `eui init`, `eui server`, `eui build`
+- `INIT` publish for first version, with function `eui init`, `eui server`, `eui build`
