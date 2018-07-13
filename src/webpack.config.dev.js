@@ -14,10 +14,6 @@ module.exports = {
     library: 'demo',
     libraryTarget: 'umd',
   },
-  externals: {
-    react: 'React',
-    'react-dom': 'ReactDOM',
-  },
   cache: true,
   module: {
     loaders: [
