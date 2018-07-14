@@ -1,9 +1,12 @@
 {
   "name": "@mistong/eui-cli",
-  "version": "0.1.4",
+  "version": "0.1.2",
   "description": "Devtools for eui component",
   "author": "mistong eui team",
   "license": "MIT",
+  "scripts": {
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
+  },
   "bin": {
     "eui": "bin/eui-tools.js"
   },
@@ -32,6 +35,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.5",
+    "conventional-changelog-cli": "^2.0.1",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
