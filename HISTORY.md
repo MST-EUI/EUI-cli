@@ -1,6 +1,10 @@
 # History
 ---
 
+## 0.1.4
+
+- `FIXED` fixed webpack config external issue
+
 ## 0.1.3
 - `FIXED` fixed `can't resolve module ReactDOM` issue
 
