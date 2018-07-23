@@ -1,6 +1,9 @@
 # History
 ---
 
+## 0.1.4
+- `FIXED` remove useless external config for webpack.config.dev.js
+
 ## 0.1.3
 - `FIXED` fixed `can't resolve module ReactDOM` issue
 
