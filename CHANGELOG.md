@@ -5,6 +5,8 @@
 
 <a name="0.1.3"></a>
 ## [0.1.3](https://github.com/MST-EUI/EUI-cli/compare/01b86ec...v0.1.3) (2018-07-14)
+<a name="0.1.6"></a>
+## 0.1.6 (2018-07-23)
 
 
 ### Bug Fixes
