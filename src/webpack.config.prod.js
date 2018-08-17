@@ -1,3 +1,4 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const util = require('./utils');
 
 module.exports = {
@@ -11,22 +12,6 @@ module.exports = {
     library: 'demo',
     libraryTarget: 'umd',
   },
-  externals: {
-    react: {
-      root: 'React',
-      commonjs2: 'react',
-      commonjs: 'react',
-      amd: 'react',
-      umd: 'react',
-    },
-    'react-dom': {
-      root: 'ReactDOM',
-      commonjs2: 'react-dom',
-      commonjs: 'react-dom',
-      amd: 'react-dom',
-      umd: 'react-dom',
-    },
-  },
   module: {
     loaders: [
       {
@@ -36,7 +21,12 @@ module.exports = {
       },
       {
         test: /\.(css|sass|scss)$/,
-        loader: 'style-loader!css-loader!sass-loader',
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader', 'sass-loader'),
+        // loader: ExtractTextPlugin.extract({
+        //   fallback: 'style-loader',
+        //   use: ['css-loader', 'sass-loader'],
+        // }),
+        // loader: 'style!css!sass',
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -53,4 +43,7 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx'],
   },
+  plugins: [
+    new ExtractTextPlugin('[name].css'),
+  ],
 };

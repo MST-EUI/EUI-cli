@@ -23,6 +23,7 @@
     "commander": "^2.15.1",
     "download": "^7.0.0",
     "express": "~4.13.4",
+    "extract-text-webpack-plugin": "^1.0.1",
     "inquirer": "^6.0.0",
     "ip": "^1.1.5",
     "mkdirp": "^0.5.1",

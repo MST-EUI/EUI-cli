@@ -5,7 +5,7 @@ const rm = require('rimraf');
 const webpackConfig = require('../webpack.config.prod');
 const pkg = require('../../package.json');
 
-const { log } = console;
+const { log, error } = console;
 const cwd = process.cwd();
 
 module.exports = {
@@ -20,10 +20,20 @@ module.exports = {
     log('');
     webpack(webpackConfig, (err, stats) => { // eslint-disable-line
       if (err) {
-        return err.toString();
+        error(err.stack || err);
+        if (err.details) {
+          error(err.details);
+        }
+        return;
       }
-      log(stats.toString());
-      log(chalk.green('Build successful.'));
+
+      log(stats.toString({
+        colors: true,
+      }));
+
+      if (!stats.hasErrors()) {
+        log(chalk.green('Build successful.'));
+      }
     });
   },
 };
