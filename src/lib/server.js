@@ -55,7 +55,6 @@ module.exports = {
           log(appErr);
         }
         log(`Listening at ${chalk.green(address)}`);
-
         // open default browser
         util.open(address);
       });

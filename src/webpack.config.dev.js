@@ -1,3 +1,4 @@
+const path = require('path');
 const webpack = require('webpack');
 const util = require('./utils');
 
@@ -11,6 +12,7 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: util.cwdPath('dist'),
+    publicPath: '/',
     library: 'demo',
     libraryTarget: 'umd',
   },
@@ -21,6 +23,9 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
+        query: {
+          presets: ['env', 'es2015', 'react', 'stage-0'].map(item => require.resolve(`babel-preset-${item}`)),
+        },
       },
       {
         test: /\.(css|sass|scss)$/,
@@ -29,12 +34,6 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif)$/,
         loader: 'file-loader',
-      },
-    ],
-    postLoaders: [
-      {
-        test: /\.js$/,
-        loaders: ['es3ify-loader'],
       },
     ],
   },
@@ -49,5 +48,10 @@ module.exports = {
   ],
   resolve: {
     extensions: ['', '.js', '.jsx'],
+  },
+  resolveLoader: {
+    modulesDirectories: [
+      path.resolve(__dirname, '../node_modules'),
+    ],
   },
 };
