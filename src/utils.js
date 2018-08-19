@@ -3,6 +3,7 @@ const path = require('path');
 const { spawn } = require('child_process');
 
 const { log, error } = console;
+const chalk = require('chalk');
 const download = require('download');
 const mkdirp = require('mkdirp');
 
@@ -11,15 +12,17 @@ const cwd = process.cwd();
 const utils = {
   fetchTpl(url) {
     return new Promise((resolve) => {
+      log(chalk.blue('Start Download Template ...'));
       download(url, cwd, {
         extract: true,
-        retries: 0,
-        timeout: 10000,
+        // retries: 0,
+        // timeout: 10000,
       }).then((files) => {
+        log(chalk.green('Download Template Success!'));
         resolve(files);
       }).catch((err) => {
         log('');
-        log(`Download Template Error: ${err}`);
+        log(chalk.red(`Download Template Error: ${url}`));
         error(err);
       });
     });
@@ -31,7 +34,7 @@ const utils = {
       log(`Generate file: ${targetPath}`);
       fs.writeFileSync(targetPath, data);
     } catch (err) {
-      log(`Write File ${targetPath} Error:`);
+      log(chalk.red(`Write File ${targetPath} Error:`));
       error(err);
     }
   },
