@@ -12,9 +12,6 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: util.cwdPath('dist'),
-    publicPath: '/',
-    library: 'demo',
-    libraryTarget: 'umd',
   },
   cache: true,
   module: {
