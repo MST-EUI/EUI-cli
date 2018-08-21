@@ -6,7 +6,7 @@ module.exports = {
   entry: {
     app: [
       util.cwdPath('./demo/index.js'),
-      'webpack-hot-middleware/client?reload=true&noInfo=true',
+      path.resolve(__dirname, '../node_modules/webpack-hot-middleware/client?reload=true&noInfo=true'),
     ],
   },
   output: {
@@ -32,6 +32,15 @@ module.exports = {
         test: /\.(png|svg|jpg|gif)$/,
         loader: 'file-loader',
       },
+      {
+        enforce: 'pre',
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          eslintPath: util.cwdPath('./src'),
+        },
+      },
     ],
   },
   plugins: [
@@ -50,5 +59,8 @@ module.exports = {
     modulesDirectories: [
       path.resolve(__dirname, '../node_modules'),
     ],
+  },
+  eslint: {
+    configFile: path.resolve(__dirname, '../src/.eslintrc'),
   },
 };
