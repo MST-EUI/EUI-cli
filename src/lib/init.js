@@ -1,13 +1,12 @@
 const path = require('path');
 const fs = require('fs');
-
-const { log } = console;
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const rm = require('rimraf');
-
 const alias = require('../alias');
 const { fetchTpl, writeFile } = require('../utils');
+
+const { log } = console;
 
 const questions = [
   {
@@ -27,7 +26,7 @@ const questions = [
 
 module.exports = {
   name: 'init',
-  description: 'init a eui component template for developer',
+  description: ' Initialize a eui component template for developer',
   action: () => {
     const tplType = process.argv[3] || 'pc';
     const tplUrl = /^https?:\/\//.test(tplType) ? tplType : alias[tplType];
@@ -47,7 +46,7 @@ module.exports = {
       const files = await fetchTpl(tplUrl);
       log(chalk.blue('Start to Copy Files'));
       // 根据download下来的文件重写到本地当前目录
-      files.filter(({ type }) => type === 'file').map((file) => {
+      files.filter(({ type }) => type === 'file').forEach((file) => {
         if (/package.json$/.test(file.path.split('/')[1])) {
           const newPkgData = Object.assign({}, JSON.parse(file.data), answer);
           fs.writeFileSync(`${process.cwd()}/package.json`, Buffer.from(JSON.stringify(newPkgData, null, 2)));

@@ -66,6 +66,10 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('index.css'),
-    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+    }),
   ],
 };
