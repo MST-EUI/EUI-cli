@@ -1,9 +1,16 @@
+<a name="0.1.8"></a>
+## [0.1.8](https://github.com/MST-EUI/EUI-cli/compare/v0.1.7...v0.1.8) (2018-08-27)
+
+
+### Bug Fixes
+
+* **package.json:** move extract-text-webpack-plugin from devDependencies to dependencies ([6f8df3b](https://github.com/MST-EUI/EUI-cli/commit/6f8df3b))
+
+
+
 <a name="0.1.7"></a>
 ## [0.1.7](https://github.com/MST-EUI/EUI-cli/compare/v0.1.4...v0.1.7) (2018-08-27)
 
-### Refactor
-* migrate webpack loader ([f6986a3](https://github.com/MST-EUI/EUI-cli/commit/f6986a3))
-* add extract-webpack-text-plugin and ungify for build bundle ([a8142bb](https://github.com/MST-EUI/EUI-cli/commit/a8142bb))
 
 ### Bug Fixes
 
