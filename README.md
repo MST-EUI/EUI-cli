@@ -8,7 +8,7 @@
 
 # Usage
 
-* `eui init` 根据模板初始化 `eui-component` 项目
+* `eui init` 初始化[eui组件模板](https://github.com/MST-EUI/EUI-component-tpl)
 * `eui server` 启动本地开发服务器
 * `eui build` 打包模块
 

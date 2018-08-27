@@ -1,3 +1,20 @@
+<a name="0.1.6"></a>
+## [0.1.6](https://github.com/MST-EUI/EUI-cli/compare/v0.1.4...v0.1.6) (2018-08-27)
+
+### Refactor
+* migrate webpack loader ([f6986a3](https://github.com/MST-EUI/EUI-cli/commit/f6986a3))
+* add extract-webpack-text-plugin and ungify for build bundle ([a8142bb](https://github.com/MST-EUI/EUI-cli/commit/a8142bb))
+
+### Bug Fixes
+
+* **alias:** update template url ([7e4a6e2](https://github.com/MST-EUI/EUI-cli/commit/7e4a6e2))
+
+
+### Features
+
+* update template version ([1f80a0b](https://github.com/MST-EUI/EUI-cli/commit/1f80a0b))
+
+
 <a name="0.1.4"></a>
 ## [0.1.4](https://github.com/MST-EUI/EUI-cli/compare/v0.1.3...v0.1.4) (2018-07-14)
 
@@ -5,8 +22,6 @@
 
 <a name="0.1.3"></a>
 ## [0.1.3](https://github.com/MST-EUI/EUI-cli/compare/01b86ec...v0.1.3) (2018-07-14)
-<a name="0.1.6"></a>
-## 0.1.6 (2018-07-23)
 
 
 ### Bug Fixes
