@@ -6,7 +6,7 @@ module.exports = {
   entry: {
     app: [
       util.cwdPath('./demo/index.js'),
-      path.resolve(__dirname, '../node_modules/webpack-hot-middleware/client?reload=true&noInfo=true'),
+      util.cwdPath('./node_modules/webpack-hot-middleware/client?reload=true&noInfo=true'),
     ],
   },
   output: {
@@ -50,14 +50,20 @@ module.exports = {
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    // new webpack.NoEmitOnErrorsPlugin(),
   ],
   resolve: {
+    modules: [
+      path.resolve(__dirname, '../node_modules'),
+      path.resolve(__dirname, '../../'),
+      process.cwd(),
+      'node_modules',
+    ],
     extensions: ['', '.js', '.jsx'],
   },
   resolveLoader: {
     modulesDirectories: [
       path.resolve(__dirname, '../node_modules'),
+      path.resolve(__dirname, '../../'),
     ],
   },
   eslint: {

@@ -57,11 +57,18 @@ module.exports = {
     ],
   },
   resolve: {
+    modules: [
+      path.resolve(__dirname, '../node_modules'),
+      path.resolve(__dirname, '../../'),
+      process.cwd(),
+      'node_modules',
+    ],
     extensions: ['', '.js', '.jsx'],
   },
   resolveLoader: {
     modulesDirectories: [
       path.resolve(__dirname, '../node_modules'),
+      path.resolve(__dirname, '../../'),
     ],
   },
   plugins: [
