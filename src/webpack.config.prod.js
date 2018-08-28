@@ -58,8 +58,7 @@ module.exports = {
   },
   resolve: {
     modules: [
-      path.resolve(__dirname, '../node_modules'),
-      path.resolve(__dirname, '../../'),
+      util.cwdPath('./node_modules'),
       process.cwd(),
       'node_modules',
     ],
@@ -67,8 +66,7 @@ module.exports = {
   },
   resolveLoader: {
     modulesDirectories: [
-      path.resolve(__dirname, '../node_modules'),
-      path.resolve(__dirname, '../../'),
+      util.cwdPath('./node_modules'),
     ],
   },
   plugins: [
