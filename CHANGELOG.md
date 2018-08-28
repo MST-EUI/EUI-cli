@@ -1,3 +1,13 @@
+<a name="0.1.11"></a>
+## [0.1.11](https://github.com/MST-EUI/EUI-cli/compare/v0.1.10...v0.1.11) (2018-08-28)
+
+
+### Bug Fixes
+
+* resolve webpack loader path ([f14b9a7](https://github.com/MST-EUI/EUI-cli/commit/f14b9a7))
+
+
+
 <a name="0.1.10"></a>
 ## [0.1.10](https://github.com/MST-EUI/EUI-cli/compare/v0.1.9...v0.1.10) (2018-08-28)
 
