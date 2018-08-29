@@ -1,3 +1,13 @@
+<a name="0.1.12"></a>
+## [0.1.12](https://github.com/MST-EUI/EUI-cli/compare/v0.1.11...v0.1.12) (2018-08-29)
+
+
+### Bug Fixes
+
+* remove eslint-loader from webpack.config.dev ([9bb980b](https://github.com/MST-EUI/EUI-cli/commit/9bb980b))
+
+
+
 <a name="0.1.11"></a>
 ## [0.1.11](https://github.com/MST-EUI/EUI-cli/compare/v0.1.10...v0.1.11) (2018-08-28)
 
