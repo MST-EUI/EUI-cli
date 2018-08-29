@@ -1,4 +1,3 @@
-const path = require('path');
 const webpack = require('webpack');
 const util = require('./utils');
 
@@ -54,8 +53,5 @@ module.exports = {
     modulesDirectories: [
       util.cwdPath('./node_modules'),
     ],
-  },
-  eslint: {
-    configFile: path.resolve(__dirname, '../src/.eslintrc'),
   },
 };
