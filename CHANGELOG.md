@@ -1,3 +1,13 @@
+<a name="0.1.13"></a>
+## [0.1.13](https://github.com/MST-EUI/EUI-cli/compare/v0.1.12...v0.1.13) (2018-08-29)
+
+
+### Bug Fixes
+
+* eslint ([1f23511](https://github.com/MST-EUI/EUI-cli/commit/1f23511))
+
+
+
 <a name="0.1.12"></a>
 ## [0.1.12](https://github.com/MST-EUI/EUI-cli/compare/v0.1.11...v0.1.12) (2018-08-29)
 
