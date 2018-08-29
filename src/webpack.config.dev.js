@@ -21,7 +21,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['env', 'es2015', 'react', 'stage-0'].map(item => require.resolve(`babel-preset-${item}`)),
+          presets: ['env', 'react', 'stage-0'].map(item => require.resolve(`babel-preset-${item}`)),
         },
       },
       {
@@ -31,15 +31,6 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif)$/,
         loader: 'file-loader',
-      },
-      {
-        enforce: 'pre',
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-        options: {
-          eslintPath: util.cwdPath('./src'),
-        },
       },
     ],
   },
