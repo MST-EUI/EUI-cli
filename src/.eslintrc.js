@@ -1,4 +1,4 @@
-{
+module.exports = {
   "extends": ["airbnb", "plugin:jest/recommended"],
   "parser": "babel-eslint",
   "plugins": [
@@ -23,4 +23,4 @@
     "no-restricted-syntax": "off",
     "react/forbid-prop-types": "off"
   }
-}
+};

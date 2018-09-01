@@ -9,13 +9,25 @@ program
   .usage('<command> [options]');
 
 Object.keys(tools).forEach((item) => {
-  const { name, description, action } = tools[item];
-  program
+  const {
+    name = '',
+    description = '',
+    hasOptions = false,
+    options = [],
+    action = () => {},
+  } = tools[item];
+  const cmd = program
     .command(name)
-    .description(description)
-    .action((option) => {
-      action.call(this, option);
+    .description(description);
+  // add options for command
+  if (hasOptions) {
+    options.forEach((option) => {
+      cmd.option(...option);
     });
+  }
+  cmd.action((...args) => {
+    action.apply(this, args);
+  });
 });
 
 program.parse(process.argv);

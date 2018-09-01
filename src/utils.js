@@ -28,7 +28,7 @@ const utils = {
     });
   },
   writeFile({ path: filePath, data }) {
-    const targetPath = path.join(cwd, filePath.split('/').slice(1).join('/'));
+    const targetPath = path.resolve(cwd, filePath.split('/').slice(1).join('/'));
     try {
       mkdirp.sync(path.dirname(targetPath));
       log(`Generate file: ${targetPath}`);
@@ -59,11 +59,11 @@ const utils = {
   },
   // get absolute path to cwd
   cwdPath(...args) {
-    return path.join(process.cwd(), ...args);
+    return path.resolve(process.cwd(), ...args);
   },
   // get absolute path to __dirname
   relPath(...args) {
-    return path.join(__dirname, ...args);
+    return path.resolve(__dirname, ...args);
   },
 };
 
