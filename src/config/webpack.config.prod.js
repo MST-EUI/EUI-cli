@@ -1,15 +1,15 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const util = require('./utils');
+const { cwdPath } = require('../utils');
 
 module.exports = {
   entry: {
-    index: util.cwdPath('./src/index.js'),
+    index: cwdPath('./src/index.js'),
   },
   output: {
     filename: '[name].js',
-    path: util.cwdPath('dist'),
+    path: cwdPath('dist'),
     publicPath: '/',
     library: `@mistong/${path.basename(process.cwd())}`,
     libraryTarget: 'umd',
@@ -58,7 +58,7 @@ module.exports = {
   },
   resolve: {
     modules: [
-      util.cwdPath('./node_modules'),
+      cwdPath('./node_modules'),
       process.cwd(),
       'node_modules',
     ],
@@ -66,11 +66,12 @@ module.exports = {
   },
   resolveLoader: {
     modulesDirectories: [
-      util.cwdPath('./node_modules'),
+      cwdPath('./node_modules'),
     ],
   },
   plugins: [
     new ExtractTextPlugin('index.css'),
+    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,

@@ -7,7 +7,7 @@ const portscanner = require('portscanner');
 const ip = require('ip');
 
 const util = require('../utils');
-const webpackConfig = require('../webpack.config.dev');
+const webpackConfig = require('../config/webpack.config.dev');
 
 const { log, error } = console;
 

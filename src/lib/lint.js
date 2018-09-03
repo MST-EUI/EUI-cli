@@ -1,8 +1,8 @@
 const { existsSync, readFileSync } = require('fs');
 const { CLIEngine } = require('eslint');
-const eslintConfig = require('../.eslintrc.js');
-const { cwdPath } = require('../utils');
 const chalk = require('chalk');
+const eslintConfig = require('../config/.eslintrc.js');
+const { cwdPath } = require('../utils');
 
 const { log } = console;
 const getIgnoreContent = (filePath) => {

@@ -3,7 +3,7 @@ const fs = require('fs');
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const rm = require('rimraf');
-const alias = require('../alias');
+const alias = require('../config/alias');
 const { fetchTpl, writeFile } = require('../utils');
 
 const { log } = console;

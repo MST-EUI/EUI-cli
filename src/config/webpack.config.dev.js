@@ -1,16 +1,16 @@
 const webpack = require('webpack');
-const util = require('./utils');
+const { cwdPath } = require('../utils');
 
 module.exports = {
   entry: {
     app: [
-      util.cwdPath('./demo/index.js'),
-      util.cwdPath('./node_modules/webpack-hot-middleware/client?reload=true&noInfo=true'),
+      cwdPath('./demo/index.js'),
+      cwdPath('./node_modules/webpack-hot-middleware/client?reload=true&noInfo=true'),
     ],
   },
   output: {
     filename: '[name].js',
-    path: util.cwdPath('dist'),
+    path: cwdPath('dist'),
   },
   cache: true,
   module: {
@@ -43,7 +43,7 @@ module.exports = {
   ],
   resolve: {
     modules: [
-      util.cwdPath('./node_modules'),
+      cwdPath('./node_modules'),
       process.cwd(),
       'node_modules',
     ],
@@ -51,7 +51,7 @@ module.exports = {
   },
   resolveLoader: {
     modulesDirectories: [
-      util.cwdPath('./node_modules'),
+      cwdPath('./node_modules'),
     ],
   },
 };
