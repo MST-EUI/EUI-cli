@@ -1,3 +1,14 @@
+<a name="0.1.14"></a>
+## [0.1.14](https://github.com/MST-EUI/EUI-cli/compare/v0.1.13...v0.1.14) (2018-09-04)
+
+
+### Features
+
+* **lint:** add lint ([7791f5a](https://github.com/MST-EUI/EUI-cli/commit/7791f5a))
+* add test script ([de63abe](https://github.com/MST-EUI/EUI-cli/commit/de63abe))
+
+
+
 <a name="0.1.13"></a>
 ## [0.1.13](https://github.com/MST-EUI/EUI-cli/compare/v0.1.12...v0.1.13) (2018-08-29)
 
