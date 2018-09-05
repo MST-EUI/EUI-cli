@@ -30,7 +30,7 @@ module.exports = {
     const linter = new CLIEngine({
       cwd: process.cwd(),
       baseConfig: eslintConfig,
-      useEslintrc: false,
+      useEslintrc: true,
       ignorePattern,
       fix: cmd.fix,
     });
