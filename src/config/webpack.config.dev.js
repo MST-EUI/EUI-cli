@@ -1,4 +1,3 @@
-const path = require('path');
 const webpack = require('webpack');
 const { cwdPath } = require('../utils');
 
@@ -6,7 +5,7 @@ module.exports = {
   entry: {
     app: [
       cwdPath('./demo/index.js'),
-      path.resolve(__dirname, '../../node_modules/webpack-hot-middleware/client?reload=true&noInfo=true'),
+      cwdPath('./node_modules/webpack-hot-middleware/client?reload=true&noInfo=true'),
     ],
   },
   output: {
