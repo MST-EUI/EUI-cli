@@ -1,3 +1,13 @@
+<a name="0.1.17"></a>
+## [0.1.17](https://github.com/MST-EUI/EUI-cli/compare/v0.1.16...v0.1.17) (2018-09-07)
+
+
+### Bug Fixes
+
+* **server:** resolve webpack-hot-middleware path ([d4a5e23](https://github.com/MST-EUI/EUI-cli/commit/d4a5e23))
+
+
+
 <a name="0.1.16"></a>
 ## [0.1.16](https://github.com/MST-EUI/EUI-cli/compare/v0.1.15...v0.1.16) (2018-09-05)
 
