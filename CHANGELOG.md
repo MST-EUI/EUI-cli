@@ -1,3 +1,13 @@
+<a name="0.1.21"></a>
+## [0.1.21](https://github.com/MST-EUI/EUI-cli/compare/v0.1.20...v0.1.21) (2018-09-19)
+
+
+### Features
+
+* remove git push --tags from script postversion ([6d84f28](https://github.com/MST-EUI/EUI-cli/commit/6d84f28))
+
+
+
 <a name="0.1.20"></a>
 ## [0.1.20](https://github.com/MST-EUI/EUI-cli/compare/v0.1.19...v0.1.20) (2018-09-19)
 
