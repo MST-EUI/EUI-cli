@@ -1,3 +1,13 @@
+<a name="0.1.18"></a>
+## [0.1.18](https://github.com/MST-EUI/EUI-cli/compare/v0.1.17...v0.1.18) (2018-09-19)
+
+
+### Features
+
+* add version check with pkg-updater automatically ([1648f10](https://github.com/MST-EUI/EUI-cli/commit/1648f10))
+
+
+
 <a name="0.1.17"></a>
 ## [0.1.17](https://github.com/MST-EUI/EUI-cli/compare/v0.1.16...v0.1.17) (2018-09-07)
 
@@ -101,7 +111,7 @@
 
 
 <a name="0.1.7"></a>
-## [0.1.7](https://github.com/MST-EUI/EUI-cli/compare/v0.1.4...v0.1.7) (2018-08-27)
+## [0.1.7](https://github.com/MST-EUI/EUI-cli/compare/v0.1.6...v0.1.7) (2018-08-27)
 
 
 ### Bug Fixes
@@ -115,8 +125,18 @@
 
 
 
+<a name="0.1.6"></a>
+## [0.1.6](https://github.com/MST-EUI/EUI-cli/compare/v0.1.5...v0.1.6) (2018-07-23)
+
+
+
+<a name="0.1.5"></a>
+## [0.1.5](https://github.com/MST-EUI/EUI-cli/compare/v0.1.4...v0.1.5) (2018-07-23)
+
+
+
 <a name="0.1.4"></a>
-## [0.1.4](https://github.com/MST-EUI/EUI-cli/compare/v0.1.3...v0.1.4) (2018-07-14)
+## [0.1.4](https://github.com/MST-EUI/EUI-cli/compare/v0.1.3...v0.1.4) (2018-07-23)
 
 
 
