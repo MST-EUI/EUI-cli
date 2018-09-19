@@ -9,7 +9,7 @@
     "precommit": "lint-staged",
     "commitmsg": "commitlint -E GIT_PARAMS",
     "version": "npm run changelog && git add CHANGELOG.md",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push"
   },
   "bin": {
     "eui": "bin/eui.js"
