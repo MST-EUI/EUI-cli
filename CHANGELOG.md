@@ -1,3 +1,13 @@
+<a name="0.1.26"></a>
+## [0.1.26](https://github.com/MST-EUI/eui-cli/compare/v0.1.25...v0.1.26) (2018-09-20)
+
+
+### Bug Fixes
+
+* fixed wrong name to __mocks__/fileMock.js ([4ce83c0](https://github.com/MST-EUI/eui-cli/commit/4ce83c0))
+
+
+
 <a name="0.1.25"></a>
 ## [0.1.25](https://github.com/MST-EUI/eui-cli/compare/v0.1.24...v0.1.25) (2018-09-19)
 
