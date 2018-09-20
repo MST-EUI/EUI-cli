@@ -7,8 +7,6 @@ module.exports = {
     '\\.(css|scss)$': require.resolve('identity-obj-proxy'),
   },
   transform: {
-    '\\.js$': relPath('./config/babelTransform.js'),
+    '\\.js$': relPath('./config/babel.transform.config.js'),
   },
-  // collectCoverageFrom: ['src/**/*.js'],
-  // testRegex: 'src/.*__spec\\.js$',
 };

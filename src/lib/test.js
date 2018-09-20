@@ -20,7 +20,7 @@ module.exports = {
     }
     argv.push(
       '--config',
-      path.resolve(__dirname, './../config/jestConfig.js'),
+      path.resolve(__dirname, './../config/jest.config.js'),
     );
     jest.run(argv);
   },
