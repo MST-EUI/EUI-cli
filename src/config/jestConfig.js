@@ -1,5 +1,4 @@
-const path = require('path');
-const { cwdPath } = require('../utils');
+const { cwdPath, relPath } = require('../utils');
 
 module.exports = {
   rootDir: process.cwd(),
@@ -8,7 +7,7 @@ module.exports = {
     '\\.(css|scss)$': require.resolve('identity-obj-proxy'),
   },
   transform: {
-    '\\.js$': path.resolve(__dirname, 'babelTransform.js'),
+    '\\.js$': relPath('./config/babelTransform.js'),
   },
   // collectCoverageFrom: ['src/**/*.js'],
   // testRegex: 'src/.*__spec\\.js$',
