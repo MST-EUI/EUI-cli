@@ -1,5 +1,5 @@
-<a name="0.1.26"></a>
-## [0.1.26](https://github.com/MST-EUI/eui-cli/compare/v0.1.25...v0.1.26) (2018-09-20)
+<a name="0.1.27"></a>
+## [0.1.27](https://github.com/MST-EUI/eui-cli/compare/v0.1.25...v0.1.27) (2018-09-20)
 
 
 ### Bug Fixes
