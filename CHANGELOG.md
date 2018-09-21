@@ -1,3 +1,13 @@
+<a name="0.1.28"></a>
+## [0.1.28](https://github.com/MST-EUI/eui-cli/compare/v0.1.27...v0.1.28) (2018-09-21)
+
+
+### Bug Fixes
+
+* add [@mistong](https://github.com/mistong) prefix for package name & alias url update ([2f64923](https://github.com/MST-EUI/eui-cli/commit/2f64923))
+
+
+
 <a name="0.1.27"></a>
 ## [0.1.27](https://github.com/MST-EUI/eui-cli/compare/v0.1.25...v0.1.27) (2018-09-20)
 
