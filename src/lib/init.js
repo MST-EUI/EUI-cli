@@ -49,6 +49,8 @@ module.exports = {
       files.filter(({ type }) => type === 'file').forEach((file) => {
         if (/package.json$/.test(file.path.split('/')[1])) {
           const newPkgData = Object.assign({}, JSON.parse(file.data), answer);
+          newPkgData.name = `@mistong/${newPkgData.name}`;
+          newPkgData.version = '0.1.0';
           fs.writeFileSync(`${process.cwd()}/package.json`, Buffer.from(JSON.stringify(newPkgData, null, 2)));
         } else {
           writeFile(file);
