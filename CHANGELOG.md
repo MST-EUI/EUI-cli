@@ -1,3 +1,13 @@
+<a name="0.1.30"></a>
+## [0.1.30](https://github.com/MST-EUI/eui-cli/compare/v0.1.29...v0.1.30) (2018-09-21)
+
+
+### Features
+
+* add commit script alias for git-cz of tpl ([abb1f72](https://github.com/MST-EUI/eui-cli/commit/abb1f72))
+
+
+
 <a name="0.1.29"></a>
 ## [0.1.29](https://github.com/MST-EUI/eui-cli/compare/v0.1.27...v0.1.29) (2018-09-21)
 
