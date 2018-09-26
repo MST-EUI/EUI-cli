@@ -49,14 +49,19 @@ module.exports = {
       files.filter(({ type }) => type === 'file').forEach((file) => {
         if (/package.json$/.test(file.path.split('/')[1])) {
           const newPkgData = Object.assign({}, JSON.parse(file.data), answer);
-          newPkgData.name = `@mistong/${newPkgData.name}`;
+          const { name } = newPkgData;
+          const tplName = 'eui-component-tpl';
+          newPkgData.name = `@mistong/${name}`;
           newPkgData.version = '0.1.0';
+          newPkgData.repository.url = newPkgData.repository.url.replace(tplName, name);
+          newPkgData.bugs.url = newPkgData.bugs.url.replace(tplName, name);
+          newPkgData.homepage = newPkgData.homepage.replace(tplName, name);
           fs.writeFileSync(`${process.cwd()}/package.json`, Buffer.from(JSON.stringify(newPkgData, null, 2)));
         } else {
           writeFile(file);
         }
       });
-      log(chalk.green(`Init Component ${answer.name} Success!`));
+      log(chalk.green(`Init component ${answer.name} success!`));
       // 删除download下来的目录
       rm(files[0].path, {}, () => {});
     };
