@@ -1,3 +1,8 @@
+<a name="0.1.34"></a>
+## [0.1.34](https://github.com/MST-EUI/eui-cli/compare/v0.1.33...v0.1.34) (2018-10-08)
+
+
+
 <a name="0.1.33"></a>
 ## [0.1.33](https://github.com/MST-EUI/eui-cli/compare/v0.1.32...v0.1.33) (2018-10-08)
 
