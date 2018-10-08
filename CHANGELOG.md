@@ -1,3 +1,13 @@
+<a name="0.1.35"></a>
+## [0.1.35](https://github.com/MST-EUI/eui-cli/compare/v0.1.34...v0.1.35) (2018-10-08)
+
+
+### Features
+
+* add babel-plugin-transform-runtime for eui package ([701ed79](https://github.com/MST-EUI/eui-cli/commit/701ed79))
+
+
+
 <a name="0.1.34"></a>
 ## [0.1.34](https://github.com/MST-EUI/eui-cli/compare/v0.1.33...v0.1.34) (2018-10-08)
 
