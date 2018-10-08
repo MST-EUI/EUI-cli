@@ -9,5 +9,9 @@ module.exports = babelJest.createTransformer({
   ].map(require.resolve),
   plugins: [
     'babel-plugin-transform-runtime',
+    ['import', {
+      libraryName: '@mistong/eui',
+    },
+    ],
   ].map(require.resolve),
 });
