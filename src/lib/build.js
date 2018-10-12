@@ -16,7 +16,7 @@ module.exports = {
     rm(path.join(cwd, 'dist'), {}, () => {});
 
     log('Build start...');
-    log(`EUI-tools version: ${pkg.version}`);
+    log(`Tools eui-cli version: ${pkg.version}`);
     log('');
     webpack(webpackConfig, (err, stats) => { // eslint-disable-line
       if (err) {
