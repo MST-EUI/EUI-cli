@@ -1,3 +1,13 @@
+<a name="0.1.38"></a>
+## [0.1.38](https://github.com/MST-EUI/eui-cli/compare/v0.1.37...v0.1.38) (2018-10-15)
+
+
+### Features
+
+* tpl version update ([ff0c119](https://github.com/MST-EUI/eui-cli/commit/ff0c119))
+
+
+
 <a name="0.1.37"></a>
 ## [0.1.37](https://github.com/MST-EUI/eui-cli/compare/v0.1.36...v0.1.37) (2018-10-12)
 
