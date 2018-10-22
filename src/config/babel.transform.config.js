@@ -6,12 +6,13 @@ module.exports = babelJest.createTransformer({
     'babel-preset-react',
     'babel-preset-env',
     'babel-preset-stage-0',
-  ].map(require.resolve),
+  ], // .map(require.resolve),
   plugins: [
     'babel-plugin-transform-runtime',
-    ['import', {
-      libraryName: '@mistong/eui',
-    },
+    [
+      'import', {
+        libraryName: '@mistong/eui',
+      },
     ],
-  ].map(require.resolve),
+  ], // .map(require.resolve),
 });
