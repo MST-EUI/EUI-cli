@@ -1,3 +1,13 @@
+<a name="0.1.40"></a>
+## [0.1.40](https://github.com/MST-EUI/eui-cli/compare/v0.1.39...v0.1.40) (2018-10-22)
+
+
+### Bug Fixes
+
+* fixed eui test crashed issue ([79fd5c4](https://github.com/MST-EUI/eui-cli/commit/79fd5c4))
+
+
+
 <a name="0.1.39"></a>
 ## [0.1.39](https://github.com/MST-EUI/eui-cli/compare/v0.1.38...v0.1.39) (2018-10-18)
 
