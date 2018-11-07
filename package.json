@@ -1,12 +1,13 @@
 {
   "name": "@mistong/eui-cli",
-  "version": "0.1.41",
+  "version": "0.1.45",
   "description": "Devtools for eui component",
   "author": "mistong eui team",
   "license": "MIT",
   "scripts": {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "precommit": "lint-staged",
+    "commit": "npx git-cz",
     "commitmsg": "commitlint -E GIT_PARAMS",
     "version": "npm run changelog && git add CHANGELOG.md",
     "postversion": "git push && git push --tags"
@@ -57,8 +58,8 @@
     "shelljs": "^0.8.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.12.9",
-    "webpack-dev-middleware": "~1.6.1",
-    "webpack-hot-middleware": "~2.10.0"
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.24.3"
   },
   "engines": {
     "node": ">=8"
@@ -67,6 +68,7 @@
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-conventional": "^7.0.1",
     "babel-eslint": "^8.2.5",
+    "commitlint": "^7.2.1",
     "conventional-changelog-cli": "^2.0.1",
     "cz-conventional-changelog": "^2.1.0",
     "eslint-config-airbnb-base": "^13.0.0",

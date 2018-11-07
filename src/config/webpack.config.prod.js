@@ -35,24 +35,24 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: require.resolve('babel-loader'),
         query: {
           presets: ['env', 'react', 'stage-0'].map(item => require.resolve(`babel-preset-${item}`)),
         },
       },
       {
         test: /\.(css|sass|scss)$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader'),
+        loader: ExtractTextPlugin.extract(`${require.resolve('style-loader')}`, `${require.resolve('css-loader')}!${require.resolve('sass-loader')}`),
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        loader: 'file-loader',
+        loader: require.resolve('file-loader'),
       },
     ],
     postLoaders: [
       {
         test: /\.js$/,
-        loaders: ['es3ify-loader'],
+        loaders: [require.resolve('es3ify-loader')],
       },
     ],
   },
@@ -76,6 +76,14 @@ module.exports = {
       compress: {
         warnings: false,
       },
+      output: {
+        beautify: true,
+        quote_keys: true,
+      },
+      mangle: {
+        screw_ie8: false,
+      },
+      sourceMap: false,
     }),
   ],
 };
